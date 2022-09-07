@@ -1,0 +1,12 @@
+version: '3.6'
+services:
+  parser_bot:
+    restart: always
+    build: .
+    container_name: "parser_bot"
+    command: sh -c "python3 main.py"
+    environment:
+      TOKEN: 5707136883:AAEGJNVWfuI9dA5IWlfAk3pWgFvH-nheP3M
+      my_chat: 746885613
+    volumes:
+      - /var/log/parser_bot:/logs:rw
